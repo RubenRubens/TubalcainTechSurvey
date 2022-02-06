@@ -105,20 +105,21 @@
 
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/anterior"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/boton_anterior"
             app:layout_constraintStart_toStartOf="@+id/guideline_start"
-            app:layout_constraintTop_toTopOf="@+id/siguiente" />
+            app:layout_constraintTop_toTopOf="@+id/enviar" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/siguiente"
+            android:id="@+id/enviar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:text="@string/boton_siguiente"
+            android:text="@string/boton_enviar"
             app:layout_constraintBottom_toTopOf="@+id/guideline_bottom"
             app:layout_constraintEnd_toStartOf="@+id/guideline_end"
             app:layout_constraintTop_toBottomOf="@+id/card" />

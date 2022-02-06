@@ -19,7 +19,15 @@ public class RealizarEncuestaIDE extends AppCompatActivity {
         siguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), RealizarEncuestaSO.class));
+                startActivity(new Intent(getApplicationContext(), RealizarEncuestaWeb.class));
+            }
+        });
+
+        MaterialButton anterior = (MaterialButton) findViewById(R.id.anterior);
+        anterior.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), RealizarEncuestaWeb.class));
             }
         });
 

@@ -15,8 +15,16 @@ public class RealizarEncuestaSO extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.realizar_encuesta_so_activity);
 
-        MaterialButton siguiente = (MaterialButton) findViewById(R.id.siguiente);
-        siguiente.setOnClickListener(new View.OnClickListener() {
+        MaterialButton enviar = (MaterialButton) findViewById(R.id.enviar);
+        enviar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            }
+        });
+
+        MaterialButton anterior = (MaterialButton) findViewById(R.id.anterior);
+        anterior.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
