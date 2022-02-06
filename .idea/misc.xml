@@ -9,6 +9,10 @@
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.35208333333333336" />
         <entry key="app/src/main/res/layout/inicio_fragmento.xml" value="0.35208333333333336" />
         <entry key="app/src/main/res/layout/realizar_encuesta_activity.xml" value="0.35208333333333336" />
+        <entry key="app/src/main/res/layout/realizar_encuesta_bd_activity.xml" value="0.35208333333333336" />
+        <entry key="app/src/main/res/layout/realizar_encuesta_ide_activity.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/realizar_encuesta_so_activity.xml" value="0.35208333333333336" />
+        <entry key="app/src/main/res/layout/realizar_encuesta_web_activity.xml" value="0.35208333333333336" />
       </map>
     </option>
   </component>
