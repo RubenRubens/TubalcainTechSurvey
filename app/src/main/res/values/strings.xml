@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TubalcainTechSurvey</string>
+    <string name="text_app_title_1">tubalcain</string>
+    <string name="text_app_title_2">tech</string>
+    <string name="text_app_title_3">survey</string>
+    <string name="boton_comenzar">Comenzar</string>
+    <string name="boton_resultados">Resultados</string>
+    <string name="boton_anterior">Anterior</string>
+    <string name="boton_siguiente">Siguiente</string>
+    <string name="boton_enviar">Enviar</string>
+    <string name="lenguajes">Lenguajes de programacion y scripting</string>
+    <string name="lenguajes_conocidos">¿En que lenguajes sabes programar?</string>
+    <string name="lenguajes_aprender">¿Te has planteador en estudiar alguno de estos lenguajes?</string>
+    <string name="title_activity_lista_multiple">ListaMultiple</string>
+</resources>
