@@ -24,7 +24,7 @@ public class InicioFragmento extends Fragment {
         botonComenzar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), RealizarEncuesta.class));
+                startActivity(new Intent(getContext(), RealizarEncuestaLenguajes.class));
             }
         });
 
