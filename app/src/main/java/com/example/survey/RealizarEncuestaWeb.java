@@ -8,19 +8,27 @@ import android.view.View;
 
 import com.google.android.material.button.MaterialButton;
 
-public class RealizarEncuestaLenguajes extends AppCompatActivity {
+public class RealizarEncuestaWeb extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.realizar_encuesta_lenguajes_activity);
+        setContentView(R.layout.realizar_encuesta_web_activity);
+
 
         MaterialButton siguiente = (MaterialButton) findViewById(R.id.siguiente);
         siguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(RealizarEncuestaLenguajes.this,
-                        RealizarEncuestaBasesDatos.class));
+                startActivity(new Intent(getApplicationContext(), RealizarEncuestaSO.class));
+            }
+        });
+
+        MaterialButton anterior = (MaterialButton) findViewById(R.id.anterior);
+        anterior.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), RealizarEncuestaSO.class));
             }
         });
 

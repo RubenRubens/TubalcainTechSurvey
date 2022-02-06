@@ -10,7 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TubalcainTechSurvey">
         <activity
+            android:name=".RealizarEncuestaSO"
+            android:exported="false" />
+        <activity
+            android:name=".RealizarEncuestaIDE"
+            android:exported="false" />
+        <activity
+            android:name=".RealizarEncuestaWeb"
+            android:exported="false" />
+        <activity
             android:name=".RealizarEncuestaLenguajes"
+            android:exported="false" />
+        <activity
+            android:name=".RealizarEncuestaBasesDatos"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

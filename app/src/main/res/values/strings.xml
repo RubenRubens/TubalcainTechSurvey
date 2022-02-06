@@ -10,6 +10,13 @@
     <string name="boton_enviar">Enviar</string>
     <string name="lenguajes">Lenguajes de programacion y scripting</string>
     <string name="lenguajes_conocidos">¿En que lenguajes sabes programar?</string>
-    <string name="lenguajes_aprender">¿Te has planteador en estudiar alguno de estos lenguajes?</string>
-    <string name="title_activity_lista_multiple">ListaMultiple</string>
+    <string name="lenguajes_aprender">¿Que lenguaje te gustaria saber?</string>
+    <string name="bd">Bases de datos</string>
+    <string name="bases_datos">¿Que bases de datos sabes utilizar?</string>
+    <string name="web">Frameworks web</string>
+    <string name="frameworks_web">¿Que frameworks web has utilizado alguna vez?</string>
+    <string name="ide">IDE/Editores</string>
+    <string name="ide_editor">¿Que IDE y editores de codigo utilizas?</string>
+    <string name="so">Sistemas operativos</string>
+    <string name="sistemas_operativos">¿Que sistema operativo utilizas para desarrollar?</string>
 </resources>
