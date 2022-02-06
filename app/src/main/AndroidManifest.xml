@@ -22,6 +22,9 @@
             android:name=".RealizarEncuestaLenguajes"
             android:exported="false" />
         <activity
+            android:name=".RealizarEncuestaBasesDatos"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
