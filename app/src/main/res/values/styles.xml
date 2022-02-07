@@ -3,7 +3,7 @@
     <style name="TextoTitulo1" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">36sp</item>
         <item name="android:fontFamily">monospace</item>
-        <item name="android:textColor">@color/purple_700</item>
+        <item name="android:textColor">@color/green_A700</item>
     </style>
     <style name="TextoTitulo2" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">36sp</item>
