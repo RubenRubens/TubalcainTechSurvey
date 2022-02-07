@@ -29,7 +29,7 @@ rama temporal y actualizar nuestro repositorio a la ultima version.
 
 ```
 git checkout master
-git branch -d <nombre_rama>
 git pull <remoto_central> master
+git branch -d <nombre_rama>
 ```
 
