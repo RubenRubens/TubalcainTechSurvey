@@ -29,7 +29,7 @@ public class Resultado extends AppCompatActivity {
         TextView textView = (TextView) findViewById(R.id.textView);
 
         Datos resultadoEncuesta = RetrofitUtil.retrofit.create(Datos.class);
-        Call<String> call = resultadoEncuesta.getData(Credentials.basic("admin", "admin"));
+        Call<String> call = resultadoEncuesta.getData(Credentials.basic("demo", "demo"));
         call.enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
