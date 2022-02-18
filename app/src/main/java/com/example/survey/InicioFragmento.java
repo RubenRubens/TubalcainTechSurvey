@@ -28,6 +28,14 @@ public class InicioFragmento extends Fragment {
             }
         });
 
+        MaterialButton botonResultados = view.findViewById(R.id.resultados);
+        botonResultados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), Resultado.class));
+            }
+        });
+
         return view;
     }
 }
