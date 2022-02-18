@@ -20,6 +20,8 @@ import retrofit2.Response;
 
 public class Resultado extends AppCompatActivity {
 
+    String textoXml;
+
     private TextView textView;
 
     @Override
@@ -32,17 +34,17 @@ public class Resultado extends AppCompatActivity {
     }
 
     private void obtenerResultadosXML(String codigo) {
-        esperaUI();
         Datos resultadoEncuesta = RetrofitUtil.retrofit.create(Datos.class);
         Call<String> call = resultadoEncuesta.getData(Credentials.basic(codigo, codigo));
         call.enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
                 Log.i("Retrofit", "Codigo HTTP " + response.code());
+                textoXml = response.body();
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        textView.setText(response.body());
+                        textView.setText(textoXml);
                     }
                 });
             }
@@ -52,10 +54,6 @@ public class Resultado extends AppCompatActivity {
                 Log.i("Retrofit", t.getMessage());
             }
         });
-    }
-
-    private void esperaUI() {
-
     }
 
 }
