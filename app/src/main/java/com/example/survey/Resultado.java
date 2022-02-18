@@ -2,7 +2,6 @@ package com.example.survey;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
@@ -21,27 +20,41 @@ import retrofit2.Response;
 
 public class Resultado extends AppCompatActivity {
 
+    private TextView textView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultado);
 
-        TextView textView = (TextView) findViewById(R.id.textView);
+        textView = (TextView) findViewById(R.id.textView);
+        obtenerResultadosXML("demo");
+    }
 
+    private void obtenerResultadosXML(String codigo) {
+        esperaUI();
         Datos resultadoEncuesta = RetrofitUtil.retrofit.create(Datos.class);
-        Call<String> call = resultadoEncuesta.getData(Credentials.basic("demo", "demo"));
+        Call<String> call = resultadoEncuesta.getData(Credentials.basic(codigo, codigo));
         call.enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
-                String plain_text_response = response.body();
-                textView.setText(plain_text_response);
+                Log.i("Retrofit", "Codigo HTTP " + response.code());
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        textView.setText(response.body());
+                    }
+                });
             }
 
             @Override
             public void onFailure(Call<String> call, Throwable t) {
-                Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_LONG).show();
+                Log.i("Retrofit", t.getMessage());
             }
         });
+    }
+
+    private void esperaUI() {
 
     }
 
