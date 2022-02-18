@@ -9,6 +9,8 @@ import android.widget.Toast;
 
 import com.example.survey.api.Datos;
 import com.example.survey.api.RetrofitUtil;
+import com.example.survey.clases.ClaseResultado;
+import com.example.survey.factories.ResultadoFactory;
 
 import okhttp3.Credentials;
 import retrofit2.Call;
@@ -44,7 +46,19 @@ public class Resultado extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+
+                        // Eliminar esto si no hace falta
                         textView.setText(textoXml);
+
+
+                        // Trabajar aqui dentro -------------------------
+                        ResultadoFactory resultadoFactory = new ResultadoFactory(textoXml);
+                        ClaseResultado resultadoEncuesta = resultadoFactory.obtenerResultado();
+
+                        // ----------------------------------------------
+
+
+
                     }
                 });
             }
