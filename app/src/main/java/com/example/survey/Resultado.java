@@ -48,10 +48,6 @@ public class Resultado extends AppCompatActivity {
                     @Override
                     public void run() {
 
-                        // Eliminar esto si no hace falta
-//                        textView.setText(resultadoEncuesta);
-
-
                         // Trabajar aqui dentro -------------------------
                         try {
                             ResultadoFactory resultadoFactory = new ResultadoFactory(textoXml);

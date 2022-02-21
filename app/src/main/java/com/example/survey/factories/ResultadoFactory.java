@@ -23,7 +23,6 @@ public class ResultadoFactory {
         this.textoXml = textoXml;
     }
 
-    // Metodo modificado por Daniel
     public ArrayList<ClaseResultado> obtenerResultado() throws Exception {
         ArrayList<ClaseResultado> clasesResultados = new ArrayList<>();
         Document document = convertStringToXMLDocument(textoXml);
@@ -49,7 +48,6 @@ public class ResultadoFactory {
         return clasesResultados;
     }
 
-    // Metodos implementados por Daniel
     private Document convertStringToXMLDocument(String textoXml) throws Exception {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();

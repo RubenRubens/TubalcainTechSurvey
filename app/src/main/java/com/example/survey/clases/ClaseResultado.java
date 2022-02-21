@@ -1,11 +1,5 @@
 package com.example.survey.clases;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class ClaseResultado {
