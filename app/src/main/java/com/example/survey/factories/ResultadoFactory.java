@@ -32,7 +32,7 @@ public class ResultadoFactory {
             String categoria = elementResultado.getAttribute("categoria");
             result += "\nCategoria: " + categoria + "\n\n";
 
-            NodeList tecnologias = document.getElementsByTagName("tecnologia");
+            NodeList tecnologias = elementResultado.getElementsByTagName("tecnologia");
             for (int j = 0; j < tecnologias.getLength(); j++) {
                 Node tecnologia = tecnologias.item(j);
                 Element elementTecnologia = (Element) tecnologia;
