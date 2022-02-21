@@ -1,11 +1,10 @@
 package com.example.survey;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.survey.api.Datos;
 import com.example.survey.api.RetrofitUtil;
@@ -48,15 +47,19 @@ public class Resultado extends AppCompatActivity {
                     public void run() {
 
                         // Eliminar esto si no hace falta
-                        textView.setText(textoXml);
+//                        textView.setText(resultadoEncuesta);
 
 
                         // Trabajar aqui dentro -------------------------
-                        ResultadoFactory resultadoFactory = new ResultadoFactory(textoXml);
-                        ClaseResultado resultadoEncuesta = resultadoFactory.obtenerResultado();
+                        try {
+                            ResultadoFactory resultadoFactory = new ResultadoFactory(textoXml);
+                            ClaseResultado resultadoEncuesta = resultadoFactory.obtenerResultado();
+                            textView.setText(resultadoEncuesta.getResultado());
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
 
                         // ----------------------------------------------
-
 
 
                     }
