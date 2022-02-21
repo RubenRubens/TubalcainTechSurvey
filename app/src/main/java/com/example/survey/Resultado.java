@@ -11,6 +11,8 @@ import com.example.survey.api.RetrofitUtil;
 import com.example.survey.clases.ClaseResultado;
 import com.example.survey.factories.ResultadoFactory;
 
+import java.util.ArrayList;
+
 import okhttp3.Credentials;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -53,8 +55,7 @@ public class Resultado extends AppCompatActivity {
                         // Trabajar aqui dentro -------------------------
                         try {
                             ResultadoFactory resultadoFactory = new ResultadoFactory(textoXml);
-                            ClaseResultado resultadoEncuesta = resultadoFactory.obtenerResultado();
-                            textView.setText(resultadoEncuesta.getResultado());
+                            ArrayList<ClaseResultado> resultadoEncuesta = resultadoFactory.obtenerResultado();
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
