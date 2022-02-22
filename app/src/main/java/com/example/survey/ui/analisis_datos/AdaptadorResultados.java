@@ -14,12 +14,12 @@ import com.example.survey.clases.ClaseTecnologia;
 
 import java.util.ArrayList;
 
-public class Adaptador extends BaseAdapter {
+public class AdaptadorResultados extends BaseAdapter {
 
     private Context context;
     private ArrayList<ClaseResultado> clasesResultados;
 
-    public Adaptador(Context context, ArrayList<ClaseResultado> clasesResultados) {
+    public AdaptadorResultados(Context context, ArrayList<ClaseResultado> clasesResultados) {
         super();
         this.context = context;
         this.clasesResultados = clasesResultados;
@@ -50,8 +50,8 @@ public class Adaptador extends BaseAdapter {
 
         ListView listadoTecnologias = categoria.findViewById(R.id.listadoTecnologia);
         ArrayList<ClaseTecnologia> clasesTecnologias = clasesResultados.get(position).getTecnologias();
-        Adaptador2 adaptador2 = new Adaptador2(context, clasesTecnologias);
-        listadoTecnologias.setAdapter(adaptador2);
+        AdaptadorTecnologia adaptadorTecnologia = new AdaptadorTecnologia(context, clasesTecnologias);
+        listadoTecnologias.setAdapter(adaptadorTecnologia);
 
         return categoria;
     }
