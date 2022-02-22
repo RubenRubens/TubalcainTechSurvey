@@ -30,7 +30,7 @@ public class AdaptadorTecnologia extends ArrayAdapter<ClaseTecnologia> {
         nombreTecnologia.setText(tecnologias.get(position).getNombre());
 
         TextView porcentaje = (TextView) tecnologia.findViewById(R.id.porcentaje);
-        porcentaje.setText(String.valueOf(tecnologias.get(position).getPorcentaje()));
+        porcentaje.setText(String.format("%.2f", tecnologias.get(position).getPorcentaje()) + " %");
 
         return tecnologia;
     }

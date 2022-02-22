@@ -17,7 +17,7 @@
     <ListView
         android:id="@+id/lista_tecnologias"
         android:layout_width="0dp"
-        android:layout_height="300dp"
+        android:layout_height="470dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline_buttom"
         app:layout_constraintEnd_toStartOf="@+id/guideline_end"

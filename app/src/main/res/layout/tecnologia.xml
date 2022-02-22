@@ -7,24 +7,36 @@
 
     <TextView
         android:id="@+id/nombre_tecnologia"
+        style="@style/NombreTecnologia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tecnologia"
-        android:textAppearance="?attr/textAppearanceBody2"
-        android:textColor="?android:attr/textColorSecondary"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_buttom"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/guideline_top" />
 
     <TextView
         android:id="@+id/porcentaje"
+        style="@style/Porcentaje"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Porcentaje"
-        android:textAppearance="?attr/textAppearanceBody2"
-        android:textColor="?android:attr/textColorSecondary"
         app:layout_constraintStart_toEndOf="@+id/nombre_tecnologia"
         app:layout_constraintTop_toTopOf="@+id/nombre_tecnologia" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="5dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_buttom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="5dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
