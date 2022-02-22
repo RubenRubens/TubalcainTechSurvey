@@ -1,14 +1,21 @@
 package com.example.survey;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.survey.api.Datos;
 import com.example.survey.api.RetrofitUtil;
+import com.example.survey.clases.ClaseResultado;
+import com.example.survey.clases.ClaseTecnologia;
+import com.example.survey.factories.ResultadoFactory;
+
+import java.util.ArrayList;
 
 import okhttp3.Credentials;
 import retrofit2.Call;
@@ -29,11 +36,12 @@ public class Resultado extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultado);
 
-        textView = (TextView) findViewById(R.id.textView);
-        obtenerResultadosXML("demo");
+        //textView = (TextView) findViewById(R.id.textView);
+        Context contexto = Resultado.this;
+        obtenerResultadosXML("demo", contexto);
     }
 
-    private void obtenerResultadosXML(String codigo) {
+    private void obtenerResultadosXML(String codigo, Context contexto) {
         Datos resultadoEncuesta = RetrofitUtil.retrofit.create(Datos.class);
         Call<String> call = resultadoEncuesta.getData(Credentials.basic(codigo, codigo));
         call.enqueue(new Callback<String>() {
@@ -44,7 +52,22 @@ public class Resultado extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        textView.setText(textoXml);
+
+                        // Trabajar aqui dentro -------------------------
+                        try {
+                            ResultadoFactory resultadoFactory = new ResultadoFactory(textoXml);
+                            ArrayList<ClaseResultado> resultadoEncuesta = resultadoFactory.obtenerResultado();
+                            ListView listado = findViewById(R.id.listado);
+                            Adaptador adaptador = new Adaptador(contexto, resultadoEncuesta);
+                            listado.setAdapter(adaptador);
+
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
+                        // ----------------------------------------------
+
+
                     }
                 });
             }
