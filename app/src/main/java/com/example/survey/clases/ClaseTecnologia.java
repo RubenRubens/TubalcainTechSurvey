@@ -7,9 +7,9 @@ public class ClaseTecnologia {
     private double porcentaje;
 
     public ClaseTecnologia(String nombre, int respuestas, double porcentaje) {
-        this.nombre = this.nombre;
-        this.respuestas = this.respuestas;
-        this.porcentaje = this.porcentaje;
+        this.nombre = nombre;
+        this.respuestas = respuestas;
+        this.porcentaje = porcentaje;
     }
 
     public String getNombre() {
