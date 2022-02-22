@@ -35,9 +35,7 @@ public class Resultado extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultado);
 
-        //textView = (TextView) findViewById(R.id.textView);
-        Context contexto = Resultado.this;
-        obtenerResultadosXML("demo", contexto);
+        obtenerResultadosXML("demo", Resultado.this);
     }
 
     private void obtenerResultadosXML(String codigo, Context contexto) {

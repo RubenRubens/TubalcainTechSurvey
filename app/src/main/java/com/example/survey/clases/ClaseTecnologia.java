@@ -20,7 +20,7 @@ public class ClaseTecnologia {
         return respuestas;
     }
 
-    public double getPorcentaje() {
-        return porcentaje;
+    public String getPorcentaje() {
+        return porcentaje * 100 + " %";
     }
 }

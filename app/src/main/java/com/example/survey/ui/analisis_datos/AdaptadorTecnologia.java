@@ -4,7 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.example.survey.R;
@@ -12,41 +12,25 @@ import com.example.survey.clases.ClaseTecnologia;
 
 import java.util.ArrayList;
 
-public class AdaptadorTecnologia extends BaseAdapter {
-    private Context context;
-    private ArrayList<ClaseTecnologia> clasesTecnologias;
+public class AdaptadorTecnologia extends ArrayAdapter<ClaseTecnologia> {
 
-    public AdaptadorTecnologia(Context context, ArrayList<ClaseTecnologia> clasesTecnologia) {
-        super();
-        this.context = context;
-        this.clasesTecnologias = clasesTecnologia;
-    }
+    private ArrayList<ClaseTecnologia> tecnologias;
 
-    @Override
-    public int getCount() {
-        return clasesTecnologias.size();
-    }
-
-    @Override
-    public Object getItem(int position) {
-        return clasesTecnologias.get(position);
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return position;
+    public AdaptadorTecnologia(Context context, ArrayList<ClaseTecnologia> tecnologias) {
+        super(context, R.layout.tecnologia, tecnologias);
+        this.tecnologias = tecnologias;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        LayoutInflater layoutTecnologia = LayoutInflater.from(context);
+        LayoutInflater layoutTecnologia = LayoutInflater.from(getContext());
         View tecnologia = layoutTecnologia.inflate(R.layout.tecnologia, null, false);
 
-        TextView txtTecnologia = (TextView) tecnologia.findViewById(R.id.txtTecnologia);
-        txtTecnologia.setText(clasesTecnologias.get(position).getNombre());
+        TextView nombreTecnologia = (TextView) tecnologia.findViewById(R.id.nombre_tecnologia);
+        nombreTecnologia.setText(tecnologias.get(position).getNombre());
 
-        TextView txtPorcentaje = (TextView) tecnologia.findViewById(R.id.txtPorcentaje);
-        txtPorcentaje.setText(String.valueOf(clasesTecnologias.get(position).getPorcentaje()));
+        TextView porcentaje = (TextView) tecnologia.findViewById(R.id.porcentaje);
+        porcentaje.setText(String.valueOf(tecnologias.get(position).getPorcentaje()));
 
         return tecnologia;
     }

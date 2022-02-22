@@ -17,6 +17,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33645833333333336" />
         <entry key="app/src/main/res/layout/activity_realizar_encuesta_bases_datos.xml" value="0.35208333333333336" />
         <entry key="app/src/main/res/layout/activity_resultado.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/categoria.xml" value="0.36822916666666666" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.35208333333333336" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.35208333333333336" />
         <entry key="app/src/main/res/layout/inicio_fragmento.xml" value="0.35208333333333336" />
@@ -26,6 +27,7 @@
         <entry key="app/src/main/res/layout/realizar_encuesta_lenguajes_activity.xml" value="0.35208333333333336" />
         <entry key="app/src/main/res/layout/realizar_encuesta_so_activity.xml" value="0.35208333333333336" />
         <entry key="app/src/main/res/layout/realizar_encuesta_web_activity.xml" value="0.35208333333333336" />
+        <entry key="app/src/main/res/layout/tecnologia.xml" value="0.4" />
       </map>
     </option>
   </component>
