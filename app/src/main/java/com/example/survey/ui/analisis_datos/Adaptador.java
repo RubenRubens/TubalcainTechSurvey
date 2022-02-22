@@ -1,4 +1,4 @@
-package com.example.survey;
+package com.example.survey.ui.analisis_datos;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.survey.R;
 import com.example.survey.clases.ClaseResultado;
 import com.example.survey.clases.ClaseTecnologia;
 

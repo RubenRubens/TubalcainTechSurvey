@@ -18,25 +18,25 @@
             android:resource="@xml/network_security_config" />
 
         <activity
-            android:name=".Resultado"
+            android:name=".ui.analisis_datos.Resultado"
             android:exported="false" />
         <activity
-            android:name=".RealizarEncuestaSO"
+            android:name=".ui.realizar_encuesta.RealizarEncuestaSO"
             android:exported="false" />
         <activity
-            android:name=".RealizarEncuestaIDE"
+            android:name=".ui.realizar_encuesta.RealizarEncuestaIDE"
             android:exported="false" />
         <activity
-            android:name=".RealizarEncuestaWeb"
+            android:name=".ui.realizar_encuesta.RealizarEncuestaWeb"
             android:exported="false" />
         <activity
-            android:name=".RealizarEncuestaLenguajes"
+            android:name=".ui.realizar_encuesta.RealizarEncuestaLenguajes"
             android:exported="false" />
         <activity
-            android:name=".RealizarEncuestaBasesDatos"
+            android:name=".ui.realizar_encuesta.RealizarEncuestaBasesDatos"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.inicio.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
