@@ -1,18 +1,17 @@
-package com.example.survey;
+package com.example.survey.ui.analisis_datos;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.survey.R;
 import com.example.survey.api.Datos;
 import com.example.survey.api.RetrofitUtil;
 import com.example.survey.clases.ClaseResultado;
-import com.example.survey.clases.ClaseTecnologia;
 import com.example.survey.factories.ResultadoFactory;
 
 import java.util.ArrayList;

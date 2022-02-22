@@ -1,4 +1,4 @@
-package com.example.survey;
+package com.example.survey.ui.realizar_encuesta;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,21 +6,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.survey.R;
 import com.google.android.material.button.MaterialButton;
 
-public class RealizarEncuestaBasesDatos extends AppCompatActivity {
+public class RealizarEncuestaIDE extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.realizar_encuesta_bd_activity);
-
+        setContentView(R.layout.realizar_encuesta_ide_activity);
 
         MaterialButton siguiente = (MaterialButton) findViewById(R.id.siguiente);
         siguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), RealizarEncuestaIDE.class));
+                startActivity(new Intent(getApplicationContext(), RealizarEncuestaWeb.class));
             }
         });
 
@@ -28,7 +28,7 @@ public class RealizarEncuestaBasesDatos extends AppCompatActivity {
         anterior.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), RealizarEncuestaLenguajes.class));
+                startActivity(new Intent(getApplicationContext(), RealizarEncuestaWeb.class));
             }
         });
 

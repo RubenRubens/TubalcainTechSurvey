@@ -1,4 +1,4 @@
-package com.example.survey;
+package com.example.survey.ui.inicio;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.survey.R;
+import com.example.survey.ui.analisis_datos.Resultado;
+import com.example.survey.ui.realizar_encuesta.RealizarEncuestaLenguajes;
 import com.google.android.material.button.MaterialButton;
 
 public class InicioFragmento extends Fragment {

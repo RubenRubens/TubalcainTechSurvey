@@ -1,4 +1,4 @@
-package com.example.survey;
+package com.example.survey.ui.realizar_encuesta;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.survey.R;
 import com.google.android.material.button.MaterialButton;
 
 public class RealizarEncuestaLenguajes extends AppCompatActivity {
