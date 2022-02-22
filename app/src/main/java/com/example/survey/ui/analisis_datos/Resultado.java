@@ -50,8 +50,8 @@ public class Resultado extends AppCompatActivity {
                     @Override
                     public void run() {
 
-                        // Trabajar aqui dentro -------------------------
                         try {
+
                             ResultadoFactory resultadoFactory = new ResultadoFactory(textoXml);
                             ArrayList<ClaseResultado> resultadoEncuesta = resultadoFactory.obtenerResultado();
                             ListView listado = findViewById(R.id.listado);
@@ -61,9 +61,6 @@ public class Resultado extends AppCompatActivity {
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
-
-                        // ----------------------------------------------
-
 
                     }
                 });
