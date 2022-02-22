@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.survey.R;
-import com.example.survey.api.Datos;
+import com.example.survey.api.Endpoints;
 import com.example.survey.api.RetrofitUtil;
 import com.example.survey.clases.ClaseResultado;
 import com.example.survey.factories.ResultadoFactory;
@@ -41,7 +41,7 @@ public class Resultado extends AppCompatActivity {
     }
 
     private void obtenerResultadosXML(String codigo, Context contexto) {
-        Datos resultadoEncuesta = RetrofitUtil.retrofit.create(Datos.class);
+        Endpoints resultadoEncuesta = RetrofitUtil.retrofit.create(Endpoints.class);
         Call<String> call = resultadoEncuesta.getData(Credentials.basic(codigo, codigo));
         call.enqueue(new Callback<String>() {
             @Override
@@ -57,8 +57,8 @@ public class Resultado extends AppCompatActivity {
                             ResultadoFactory resultadoFactory = new ResultadoFactory(textoXml);
                             ArrayList<ClaseResultado> resultadoEncuesta = resultadoFactory.obtenerResultado();
                             ListView listado = findViewById(R.id.listado);
-                            Adaptador adaptador = new Adaptador(contexto, resultadoEncuesta);
-                            listado.setAdapter(adaptador);
+                            AdaptadorResultados adaptadorResultados = new AdaptadorResultados(contexto, resultadoEncuesta);
+                            listado.setAdapter(adaptadorResultados);
 
                         } catch (Exception e) {
                             e.printStackTrace();

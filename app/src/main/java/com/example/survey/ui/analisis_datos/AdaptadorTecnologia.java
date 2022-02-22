@@ -12,11 +12,11 @@ import com.example.survey.clases.ClaseTecnologia;
 
 import java.util.ArrayList;
 
-public class Adaptador2 extends BaseAdapter {
+public class AdaptadorTecnologia extends BaseAdapter {
     private Context context;
     private ArrayList<ClaseTecnologia> clasesTecnologias;
 
-    public Adaptador2(Context context, ArrayList<ClaseTecnologia> clasesTecnologia) {
+    public AdaptadorTecnologia(Context context, ArrayList<ClaseTecnologia> clasesTecnologia) {
         super();
         this.context = context;
         this.clasesTecnologias = clasesTecnologia;
