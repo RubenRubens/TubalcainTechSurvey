@@ -59,7 +59,6 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <!--TODO: Esto puede ser mejorado-->
                     <CheckBox
                         android:id="@+id/checkbox_conocer_1"
                         android:layout_width="wrap_content"
